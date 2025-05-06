@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private GhostReplay ghostReplay;
     # endregion
 
-    
+
     private Rigidbody playerRigidbody;
     private Vector3 playerInput;
 
@@ -42,10 +42,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerRigidbody == null) {
-            return;
-        }
-
         playerInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
 
         isGrounded = CheckGround();
@@ -55,32 +51,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R)) {
-            if (!isRecording) {
-                isRecording = true;
-                playerRecorder.StartRecording();
-            } else {
-                playerRecorder.StopRecording();
-                isRecording = false;
-            }
+            HandleRecording();
         }
 
-        if (Input.GetKeyDown(KeyCode.P)) {
-            if (ghostPrefab != null) {
-                ghostInstance = Instantiate(ghostPrefab);
-                ghostReplay = ghostInstance.GetComponent<GhostReplay>();
-                ghostReplay.OnReplayOver += HandleReplayOver;
-                ghostReplay.StartReplay();
-
-            }
+        if (Input.GetKeyDown(KeyCode.P) && ghostPrefab != null) {
+            CreateGhostAndReplayActions();
         }
     }
 
     void FixedUpdate()
     {
-        if (playerRigidbody == null) {
-            return;
-        }
-
         MovePlayer();
     }
 
@@ -109,6 +89,22 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void HandleRecording() {
+        if (!isRecording) {
+            playerRecorder.StartRecording();
+        } else {
+            playerRecorder.StopRecording();
+        }
+        isRecording = !isRecording;
+    }
+
+    private void CreateGhostAndReplayActions() {
+        ghostInstance = Instantiate(ghostPrefab);
+        ghostReplay = ghostInstance.GetComponent<GhostReplay>();
+        ghostReplay.OnReplayOver += HandleReplayOver;
+        ghostReplay.StartReplay();
     }
 
     private void HandleReplayOver() {
