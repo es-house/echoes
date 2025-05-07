@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5838151659329392411}
   - component: {fileID: 1299299973136935026}
   - component: {fileID: 6032744389110767803}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
   playerSpeed: 8
   jumpForce: 5
   maxSpeed: 10
-  ghost: {fileID: 0}
+  ghostPrefab: {fileID: 0}
 --- !u!114 &6032744389110767803
 MonoBehaviour:
   m_ObjectHideFlags: 0

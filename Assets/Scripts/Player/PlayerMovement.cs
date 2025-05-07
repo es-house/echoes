@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             HandleRecording();
         }
 
-        if (Input.GetKeyDown(KeyCode.P) && ghostPrefab != null) {
+        if (Input.GetKeyDown(KeyCode.P) && ghostPrefab != null && ghostInstance == null) {
             CreateGhostAndReplayActions();
         }
     }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7581391091310147631}
   - component: {fileID: 7747149587572915196}
   - component: {fileID: 5752341721153791632}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,5 +151,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f7d8f302531414292903bf19b81519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRecorder: {fileID: 0}
   replaySpeed: 1
