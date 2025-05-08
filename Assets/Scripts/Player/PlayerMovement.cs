@@ -14,18 +14,17 @@ public class PlayerMovement : MonoBehaviour
     private float maxSpeed = 10f;
     # endregion
 
-    # region Ghost
-    [SerializeField]
-    private GameObject ghostPrefab;
-    private GameObject ghostInstance;
-    private GhostReplay ghostReplay;
-    # endregion
+    // # region Ghost
+    // [SerializeField]
+    // private GameObject ghostPrefab;
+    // private GameObject ghostInstance;
+    // private GhostReplay ghostReplay;
+    // # endregion
 
 
     private Rigidbody playerRigidbody;
     private Vector3 playerInput;
 
-    private PlayerRecorder playerRecorder;
     private bool isRecording = false;
 
     private bool isGrounded = true;
@@ -36,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
-        playerRecorder = GetComponent<PlayerRecorder>();
     }
 
     // Update is called once per frame
@@ -48,14 +46,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
             Jump();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R)) {
-            HandleRecording();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P) && ghostPrefab != null && ghostInstance == null) {
-            CreateGhostAndReplayActions();
         }
     }
 
@@ -89,26 +79,5 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         return false;
-    }
-
-    private void HandleRecording() {
-        if (!isRecording) {
-            playerRecorder.StartRecording();
-        } else {
-            playerRecorder.StopRecording();
-        }
-        isRecording = !isRecording;
-    }
-
-    private void CreateGhostAndReplayActions() {
-        ghostInstance = Instantiate(ghostPrefab);
-        ghostReplay = ghostInstance.GetComponent<GhostReplay>();
-        ghostReplay.OnReplayOver += HandleReplayOver;
-        ghostReplay.StartReplay();
-    }
-
-    private void HandleReplayOver() {
-        ghostReplay.OnReplayOver -= HandleReplayOver;
-        Destroy(ghostInstance, 0.2f);
     }
 }

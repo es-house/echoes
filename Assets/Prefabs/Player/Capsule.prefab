@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5838151659329392411}
   - component: {fileID: 1299299973136935026}
   - component: {fileID: 6032744389110767803}
+  - component: {fileID: -7516237083095607887}
   m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
@@ -155,7 +156,6 @@ MonoBehaviour:
   playerSpeed: 8
   jumpForce: 5
   maxSpeed: 10
-  ghostPrefab: {fileID: 0}
 --- !u!114 &6032744389110767803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,3 +169,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recordingInterval: 0.1
+--- !u!114 &-7516237083095607887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433744469177821691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a35a0e47634adb479486bb2acd35100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostPrefab: {fileID: 5044254612985685502, guid: 6c81ac69b71c2e14da39b0d3be270398, type: 3}

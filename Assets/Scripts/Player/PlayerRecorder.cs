@@ -11,6 +11,20 @@ public class PlayerRecorder : MonoBehaviour
     private List<PlayerRecordData> playerRecordDatas = new List<PlayerRecordData>();
     private Coroutine currentRecordingCoroutine;
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.R)) {
+            HandleRecording();
+        }
+    }
+
+    private void HandleRecording() {
+        if (!isRecording) {
+            StartRecording();
+        } else {
+            StopRecording();
+        }
+    }
+
     public List<PlayerRecordData> GetPlayerRecordedData () {
         return playerRecordDatas;
     }

@@ -5,29 +5,21 @@ using UnityEngine;
 
 public class GhostReplay : MonoBehaviour
 {
-    public Action OnReplayOver;
     [SerializeField]
     private float replaySpeed = 1f;
 
     private bool isReplaying = false;
-    private List<PlayerRecordData> recordedDatas;
 
-    public void StartReplay() {
-        recordedDatas = FindFirstObjectByType<PlayerRecorder>().GetPlayerRecordedData();
-        if (recordedDatas == null || recordedDatas.Count < 2) {
-            print("not enough data to replay");
-            return;
-        }
-
-        StartCoroutine(ReplayData());
+    public void StartReplay(List<PlayerRecordData> data, Action onFinished) {
+        StartCoroutine(ReplayData(data, onFinished));
     }
 
-    private IEnumerator ReplayData() {
+    private IEnumerator ReplayData(List<PlayerRecordData> data, Action onFinished) {
         isReplaying = true;
 
-        for (int index = 0; index < recordedDatas.Count - 1; index++) {
-            PlayerRecordData currentData = recordedDatas[index];
-            PlayerRecordData nextData = recordedDatas[index + 1];
+        for (int index = 0; index < data.Count - 1; index++) {
+            PlayerRecordData currentData = data[index];
+            PlayerRecordData nextData = data[index + 1];
 
             float duration = (nextData.timestamp - currentData.timestamp) / replaySpeed;
 
@@ -42,6 +34,6 @@ public class GhostReplay : MonoBehaviour
         }
 
         isReplaying = false;
-        OnReplayOver?.Invoke();
+        onFinished?.Invoke();
     }
 }
