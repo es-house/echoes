@@ -1,8 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PressureButton : MonoBehaviour
 {
+    [SerializeField]
+    private UnityEvent onButtonPressed;
+    [SerializeField]
+    private UnityEvent onButtonReleased;
     [SerializeField]
     private float pressDepth = 0.1f;
     [SerializeField]
@@ -53,15 +58,21 @@ public class PressureButton : MonoBehaviour
     private void ClearObjectsOnPlaneReferences()
     {
         objectsOnPlate.RemoveWhere(obj => obj == null);
+        if (objectsOnPlate.Count <= 0)
+        {
+            Deactivate();
+        }
     }
 
     private void Activate()
     {
         print("activating");
+        onButtonPressed.Invoke();
     }
 
     private void Deactivate()
     {
         print("deactivating");
+        onButtonReleased.Invoke();
     }
 }
