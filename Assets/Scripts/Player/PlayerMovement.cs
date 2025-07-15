@@ -74,7 +74,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckGround() {
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, groundDistanceCheck)) {
-            if (hit.collider.CompareTag("Ground")) {
+            print("hitting something");
+            if (hit.collider.CompareTag("Ground"))
+            {
                 return true;
             }
         }
