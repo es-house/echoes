@@ -2569,6 +2569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainDoorPressureButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3837291013186437649, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 95610b371964ce44e9dcca36de7064b0, type: 2}
     - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6916,6 +6920,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 26815697}
     m_Modifications:
+    - target: {fileID: 2260127649114792153, guid: a47d33c78cbc02147a9724818583014d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f94467e9ee7fe44c85658b56220ba9d, type: 2}
     - target: {fileID: 4582912028633948716, guid: a47d33c78cbc02147a9724818583014d, type: 3}
       propertyPath: m_Name
       value: MainDoor (1)
@@ -12228,6 +12236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6625031851463975421, guid: efa2a3964a9413242898def4034224f5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b6355d8f969fbaa4d9cafe8c1a726762, type: 2}
     - target: {fileID: 6959725322833206248, guid: efa2a3964a9413242898def4034224f5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13046,6 +13058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpikesPressureButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3837291013186437649, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9be7bb46aa62b5e4c9682da039f32778, type: 2}
     - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -13380,7 +13396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5264827097117808689, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4515572
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5264827097117808689, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13388,7 +13404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5264827097117808689, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -66.603226
+      value: -67
       objectReference: {fileID: 0}
     - target: {fileID: 5264827097117808689, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18002,6 +18018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressureButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3837291013186437649, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35a3e6fdf47bb6047aa7980d8ebc6e54, type: 2}
     - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19288,6 +19308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPressureButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3837291013186437649, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f842ebffef439cc4e97b55054e957eed, type: 2}
     - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19715,6 +19739,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 26815697}
     m_Modifications:
+    - target: {fileID: 2260127649114792153, guid: a47d33c78cbc02147a9724818583014d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a40ce50542d39004d8b4c2c12d3eeba8, type: 2}
     - target: {fileID: 4582912028633948716, guid: a47d33c78cbc02147a9724818583014d, type: 3}
       propertyPath: m_Name
       value: MainDoor
@@ -22700,6 +22728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformPressureButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3837291013186437649, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b6355d8f969fbaa4d9cafe8c1a726762, type: 2}
     - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -64723,6 +64755,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6625031851463975421, guid: efa2a3964a9413242898def4034224f5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f842ebffef439cc4e97b55054e957eed, type: 2}
     - target: {fileID: 6959725322833206248, guid: efa2a3964a9413242898def4034224f5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -64829,6 +64865,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 1969
       objectReference: {fileID: 0}
+    - target: {fileID: 3740548292995481112, guid: 545ac8944dc65ec4ebbc941d28bd836e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 35a3e6fdf47bb6047aa7980d8ebc6e54, type: 2}
     - target: {fileID: 3774760181670929708, guid: 545ac8944dc65ec4ebbc941d28bd836e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
