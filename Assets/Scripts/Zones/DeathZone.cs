@@ -18,15 +18,26 @@ public class DeathZone : MonoBehaviour
         }
     }
 
-    IEnumerator ResetAndReload() {
+    IEnumerator ResetAndReload()
+    {
         PlayYouLoseAudio();
         yield return new WaitForSeconds(youLoseAudioClip.length / 2);
         GameManager.Instance.ReloadScene();
     }
 
-    private void PlayYouLoseAudio() {
-        if (audioSource != null) {
+    private void PlayYouLoseAudio()
+    {
+        if (audioSource != null)
+        {
             audioSource.PlayOneShot(youLoseAudioClip);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(ResetAndReload());
         }
     }
 }
