@@ -6,6 +6,12 @@ public class PlayerRecorder : MonoBehaviour
 {
     [SerializeField]
     private float recordingInterval = 0.1f;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip startRecording;
+    [SerializeField]
+    private AudioClip stopRecording;
 
     private bool isRecording = false;
     private List<PlayerRecordData> playerRecordDatas = new List<PlayerRecordData>();
@@ -34,6 +40,8 @@ public class PlayerRecorder : MonoBehaviour
             return;
         }
 
+        audioSource.PlayOneShot(startRecording);
+
         isRecording = true;
         playerRecordDatas.Clear();
         currentRecordingCoroutine = StartCoroutine(RecordPlayer());
@@ -43,6 +51,8 @@ public class PlayerRecorder : MonoBehaviour
         if (!isRecording) {
             return;
         }
+
+        audioSource.PlayOneShot(stopRecording);
 
         isRecording = false;
         if (currentRecordingCoroutine != null) {
