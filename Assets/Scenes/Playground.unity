@@ -2570,22 +2570,6 @@ PrefabInstance:
       value: MainDoorPressureButton
       objectReference: {fileID: 0}
     - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1421955091}
@@ -2601,46 +2585,6 @@ PrefabInstance:
       propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 375727599}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CloseDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: OpenDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CloseDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DoorInteractable, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DoorInteractable, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonPressed.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4603582574604828242, guid: fb3373422d940f24eb5afb9160385700, type: 3}
-      propertyPath: onButtonReleased.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5264827097117808689, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -13094,6 +13038,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1171535140}
     m_Modifications:
+    - target: {fileID: 1544574247180757861, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: audioToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: c4ba6436bdf9d134894c132824def13f, type: 3}
     - target: {fileID: 3389317176774010419, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_Name
       value: SpikesPressureButton
@@ -19307,6 +19255,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1594352122}
     m_Modifications:
+    - target: {fileID: 1544574247180757861, guid: fb3373422d940f24eb5afb9160385700, type: 3}
+      propertyPath: audioToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: c4ba6436bdf9d134894c132824def13f, type: 3}
     - target: {fileID: 3389317176774010419, guid: fb3373422d940f24eb5afb9160385700, type: 3}
       propertyPath: m_Name
       value: PlatformPressureButton
