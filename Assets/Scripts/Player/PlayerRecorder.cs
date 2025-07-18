@@ -14,10 +14,18 @@ public class PlayerRecorder : MonoBehaviour
     private AudioClip startRecording;
     [SerializeField]
     private AudioClip stopRecording;
+    [SerializeField]
+    private ParticleSystem recordingParticleSystem;
 
     private bool isRecording = false;
     private List<PlayerRecordData> playerRecordDatas = new List<PlayerRecordData>();
     private Coroutine currentRecordingCoroutine;
+
+    void Start()
+    {
+        recordingParticleSystem.Stop();
+        recordingParticleSystem.Clear();
+    }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.R)) {
@@ -42,6 +50,7 @@ public class PlayerRecorder : MonoBehaviour
             return;
         }
 
+        recordingParticleSystem.Play();
         audioSource.PlayOneShot(startRecording);
 
         isRecording = true;
@@ -54,6 +63,8 @@ public class PlayerRecorder : MonoBehaviour
             return;
         }
 
+        recordingParticleSystem.Stop();
+        recordingParticleSystem.Clear();
         audioSource.PlayOneShot(stopRecording);
 
         isRecording = false;
