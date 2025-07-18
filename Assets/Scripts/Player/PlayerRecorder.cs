@@ -7,6 +7,8 @@ public class PlayerRecorder : MonoBehaviour
     [SerializeField]
     private float recordingInterval = 0.1f;
     [SerializeField]
+    private float maxRecordingDuration = 15f;
+    [SerializeField]
     private AudioSource audioSource;
     [SerializeField]
     private AudioClip startRecording;
@@ -60,14 +62,18 @@ public class PlayerRecorder : MonoBehaviour
         }
     }
 
-    private IEnumerator RecordPlayer() {
+    private IEnumerator RecordPlayer()
+    {
         float timer = 0f;
 
-        while (isRecording) {
+        while (isRecording && timer < maxRecordingDuration)
+        {
             RecordCurrentData(timer);
             timer += recordingInterval;
             yield return new WaitForSeconds(recordingInterval);
         }
+
+        StopRecording();
     }
 
     private void RecordCurrentData(float time) {
