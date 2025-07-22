@@ -4,6 +4,12 @@ public class GhostSpawner : MonoBehaviour
 {
     [SerializeField]
     private GameObject ghostPrefab;
+    [SerializeField]
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip spawnAudioClip;
+    [SerializeField]
+    private AudioClip despawnAudioClip;
 
     private PlayerRecorder playerRecorder;
 
@@ -23,11 +29,14 @@ public class GhostSpawner : MonoBehaviour
     }
 
     private void SpawnGhost() {
-        if (currentGhost != null) {
-            Destroy(currentGhost);
-        }
+        OnGhostReplayOver();
+        // if (currentGhost != null) {
+        //     Destroy(currentGhost);
+        // }
 
+        audioSource.PlayOneShot(spawnAudioClip);
         currentGhost = Instantiate(ghostPrefab);
+
 
         GhostReplay ghostReplay = currentGhost.GetComponent<GhostReplay>();
         ghostReplay.StartReplay(playerRecorder.GetPlayerRecordedData(), OnGhostReplayOver);
@@ -35,7 +44,8 @@ public class GhostSpawner : MonoBehaviour
 
     private void OnGhostReplayOver() {
         if (currentGhost != null) {
-            Destroy(currentGhost);
+            Destroy(currentGhost, .7f);
+            audioSource.PlayOneShot(despawnAudioClip);
             currentGhost = null;
         }
     }

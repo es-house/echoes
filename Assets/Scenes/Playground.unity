@@ -89009,6 +89009,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7516237083095607887, guid: f67c3d35e30177a4fbe9343fbe2fa526, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1314581010}
+    - target: {fileID: -7516237083095607887, guid: f67c3d35e30177a4fbe9343fbe2fa526, type: 3}
+      propertyPath: spawnAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 601b632b9973050429c6ed2359642297, type: 3}
+    - target: {fileID: -7516237083095607887, guid: f67c3d35e30177a4fbe9343fbe2fa526, type: 3}
+      propertyPath: despawnAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ede13f578d967d34eb033e4091b6462f, type: 3}
     - target: {fileID: 1299299973136935026, guid: f67c3d35e30177a4fbe9343fbe2fa526, type: 3}
       propertyPath: ghost
       value: 
