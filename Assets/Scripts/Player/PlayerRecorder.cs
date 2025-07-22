@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerRecorder : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class PlayerRecorder : MonoBehaviour
     private AudioClip stopRecording;
     [SerializeField]
     private ParticleSystem recordingParticleSystem;
+    [SerializeField]
+    private Image recordingButtonBackgroundImage;
+    [SerializeField]
+    private Image recordingButtonIconImage;
 
     private bool isRecording = false;
     private List<PlayerRecordData> playerRecordDatas = new List<PlayerRecordData>();
@@ -50,6 +55,9 @@ public class PlayerRecorder : MonoBehaviour
             return;
         }
 
+        recordingButtonBackgroundImage.color = new Color(recordingButtonBackgroundImage.color.r, recordingButtonBackgroundImage.color.g, recordingButtonBackgroundImage.color.b, .6f);
+        recordingButtonIconImage.color = new Color(recordingButtonIconImage.color.r, recordingButtonIconImage.color.g, recordingButtonIconImage.color.b, .6f);
+
         recordingParticleSystem.Play();
         audioSource.PlayOneShot(startRecording);
 
@@ -62,6 +70,9 @@ public class PlayerRecorder : MonoBehaviour
         if (!isRecording) {
             return;
         }
+
+        recordingButtonBackgroundImage.color = new Color(recordingButtonBackgroundImage.color.r, recordingButtonBackgroundImage.color.g, recordingButtonBackgroundImage.color.b, 1f);
+        recordingButtonIconImage.color = new Color(recordingButtonIconImage.color.r, recordingButtonIconImage.color.g, recordingButtonIconImage.color.b, 1f);
 
         recordingParticleSystem.Stop();
         recordingParticleSystem.Clear();

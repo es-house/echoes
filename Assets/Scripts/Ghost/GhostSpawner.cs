@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GhostSpawner : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class GhostSpawner : MonoBehaviour
     private AudioClip spawnAudioClip;
     [SerializeField]
     private AudioClip despawnAudioClip;
+    [SerializeField]
+    private Image playGhostButtonBackgroundImage;
+    [SerializeField]
+    private Image playGhostButtonIconImage;
 
     private PlayerRecorder playerRecorder;
 
@@ -34,6 +39,10 @@ public class GhostSpawner : MonoBehaviour
         //     Destroy(currentGhost);
         // }
 
+        playGhostButtonBackgroundImage.color = new Color(playGhostButtonBackgroundImage.color.r, playGhostButtonBackgroundImage.color.g, playGhostButtonBackgroundImage.color.b, .6f);
+        playGhostButtonIconImage.color = new Color(playGhostButtonIconImage.color.r, playGhostButtonIconImage.color.g, playGhostButtonIconImage.color.b, .6f);
+
+
         audioSource.PlayOneShot(spawnAudioClip);
         currentGhost = Instantiate(ghostPrefab);
 
@@ -43,10 +52,14 @@ public class GhostSpawner : MonoBehaviour
     }
 
     private void OnGhostReplayOver() {
-        if (currentGhost != null) {
-            Destroy(currentGhost, .7f);
+        if (currentGhost != null)
+        {
+            Destroy(currentGhost, .4f);
             audioSource.PlayOneShot(despawnAudioClip);
             currentGhost = null;
+            
+            playGhostButtonBackgroundImage.color = new Color(playGhostButtonBackgroundImage.color.r, playGhostButtonBackgroundImage.color.g, playGhostButtonBackgroundImage.color.b, 1f);
+            playGhostButtonIconImage.color = new Color(playGhostButtonIconImage.color.r, playGhostButtonIconImage.color.g, playGhostButtonIconImage.color.b, 1f);
         }
     }
 }
