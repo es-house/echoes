@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
@@ -13,6 +14,7 @@ public class CollectGoal : MonoBehaviour
             print("is player");
             Play2DAudio(audioClip);
             Destroy(gameObject, .2f);
+            GameManager.Instance.PauseAndShowVictoryUI();
         }
     }
 
